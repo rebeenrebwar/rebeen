@@ -1,0 +1,17 @@
+---
+- hosts: clients 
+  sudo: yes
+  vars:
+    http_port: 80
+    max_clients: 250
+  remote_user: root
+  tasks:
+#  - name: copying the website to the distantion
+#    action: copy -ar src=/home/netsys/Desktop/website/ dest=/var/www/html/
+  - name: installing apache
+    yum: pkg=httpd state=installed
+  - name: ensure apache is at the latest version
+    yum: pkg=httpd state=latest
+  - name: ensure apache is running
+    service: name=httpd state=started
+                             

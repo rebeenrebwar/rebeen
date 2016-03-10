@@ -1,0 +1,50 @@
+---
+ - hosts: localhost
+   sudo: yes
+   #user: root
+   #connection: /bin/bash
+
+   tasks:
+   - user:
+      uid=300
+      name=Obama
+      comment="barack Obama"
+      password=student
+      groups=Democrats
+   - user:
+      uid=301
+      name=Clinton
+      comment="Bill Clinton"
+      password=student
+      groups=Democrats
+
+   - user:
+      uid=302
+      name=Reagan
+      comment="Ronald Reagon"
+      password=student
+      groups=Republicans
+
+   - user:
+      uid=303
+      name=Bush
+      comment="George W. Bush"
+      password=student
+      groups=Republicans
+
+   - user:
+      uid=304
+      name=Carter
+      comment="jimmy Carter"
+      password=student
+      groups=Democrats
+
+   - user:
+      uid=305
+      name=Ford
+      comment="Garald Ford"
+      password=student
+      groups=Republicans
+
+
+
